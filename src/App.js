@@ -32,9 +32,11 @@ function App() {
     const [customers, setCustomers] = useState(initialCustomers);
     const [sales, setSales] = useState([]); // Assuming sales is an array of sales
     const [discounts] = useState(initialDiscounts);
+    const [nextSaleId, setNextSaleId] = useState(1); // Initialize sale ID counter
 
     const addSale = (newSale) => {
-        setSales([...sales, newSale]);
+        setSales([...sales, { ...newSale, id: nextSaleId }]);
+        setNextSaleId(nextSaleId + 1); // Increment sale ID counter
     };
 
     return (

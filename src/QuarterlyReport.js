@@ -13,7 +13,7 @@ const QuarterlyReport = ({ sales = [], salespersons = [] }) => {
                 {sales.map((sale) => (
                     <li key={sale.id}>
                         {/* Display relevant information about the sale */}
-                        Sale ID: {sale.id}, Amount: {sale.amount}
+                        Sale ID: {sale.id}, Amount: {sale.price}
                     </li>
                 ))}
             </ul>
