@@ -6,10 +6,8 @@ function SalesList({ sales, products, salespersons, customers, addSale }) {
 
   const handleAddSale = () => {
     const product = products.find(p => p.id === parseInt(newSale.productId));
-    console.log("updated product values are ", product);
     const commission = (product.salePrice * product.commissionPercentage) / 100;
     addSale({ ...newSale, commission });
-    console.log("updated sales values are ", sales);
     setNewSale({ productId: '', salespersonId: '', customerId: '', salesDate: '', price: 0, commission: 0 });
   };
 
@@ -22,12 +20,10 @@ function SalesList({ sales, products, salespersons, customers, addSale }) {
         <h2>Sales</h2>
         <ul>
           {sales.map((sale) => {
-            console.log("sale value is ", sale)
             const product = findProductById(sale.productId);
             const salesperson = salespersons.find(sp => sp.id == sale.salespersonId);
             const customer = customers.find(c => c.id == sale.customerId);
 
-            console.log("product value is ", product)
             if (!product || !salesperson || !customer) {
               return null; // Skip if any of the related entities are not found
             }
@@ -41,7 +37,7 @@ function SalesList({ sales, products, salespersons, customers, addSale }) {
             );
           })}
       </ul>
-  <h3>Add Sale</h3>
+  <h2>Add Sale</h2>
   <div>
     <ul>
       <li>
