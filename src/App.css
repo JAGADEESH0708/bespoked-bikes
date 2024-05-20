@@ -1,0 +1,52 @@
+/* styles.css */
+.container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.list-item {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.add-sale-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.form-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
